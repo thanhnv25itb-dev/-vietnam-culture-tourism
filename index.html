@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Culture Tourism - Văn hóa Du lịch Ẩm thực Việt Nam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg"
+                     alt="Cờ Việt Nam"
+                     class="logo-flag">
+                <span class="logo-text">Vietnam Culture</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" data-page="home" class="nav-link active">Trang chủ</a></li>
+                <li><a href="#" data-page="cuisine" class="nav-link">Ẩm thực</a></li>
+                <li><a href="#" data-page="tourism" class="nav-link">Du lịch</a></li>
+                <li><a href="#" data-page="culture" class="nav-link">Văn hóa</a></li>
+                <li><a href="#" data-page="blog" class="nav-link">Blog</a></li>
+                <li><a href="#" data-page="contact" class="nav-link">Liên hệ</a></li>
+            </ul>
+            <div class="nav-controls">
+                <input type="text" class="search-input" id="searchInput" placeholder="Tìm kiếm...">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <!-- ===================== TRANG CHỦ ===================== -->
+        <section id="home" class="page active">
+            <!-- Hero Section -->
+            <div class="hero-wrapper">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Khám Phá Văn Hóa, Du Lịch & Ẩm Thực Việt Nam</h1>
+                        <p class="hero-subtitle">Cùng chúng tôi khám phá những điều kỳ diệu của đất nước xinh đẹp này</p>
+                        <button class="cta-button" onclick="goToPage('cuisine')">
+                            <span>Bắt Đầu Khám Phá</span>
+                        </button>
+                    </div>
+                    <div class="hero-overlay"></div>
+                </div>
+            </div>
+
+            <!-- 3 Highlight Cards -->
+            <div class="home-highlights">
+                <div class="highlight-card">
+                    <div class="highlight-icon">🍲</div>
+                    <h3>Ẩm Thực</h3>
+                    <p>Khám phá những món ăn truyền thống và hiện đại của Việt Nam.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">🗺️</div>
+                    <h3>Du Lịch</h3>
+                    <p>Các địa điểm du lịch nổi tiếng không nên bỏ lỡ.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">🎭</div>
+                    <h3>Văn Hóa</h3>
+                    <p>Tìm hiểu về truyền thống và bản sắc dân tộc Việt Nam.</p>
+                </div>
+            </div>
+
+            <!-- Về Việt Nam Section -->
+            <section class="about-vietnam">
+                <div class="about-header">
+                    <h2>Việt Nam – Vẻ Đẹp Bất Tận</h2>
+                    <div class="decorative-line"></div>
+                </div>
+                <div class="about-content">
+                    <p>
+                        Việt Nam là đất nước hình chữ S với hơn 4.000 năm lịch sử,
+                        nổi tiếng với nền văn hóa lâu đời, ẩm thực phong phú và thiên nhiên đa dạng.
+                        Từ ruộng bậc thang Sa Pa, Vịnh Hạ Long kỳ vĩ
+                        đến phố cổ Hội An lung linh đèn lồng,
+                        mỗi vùng đất đều mang một vẻ đẹp và bản sắc riêng biệt.
+                    </p>
+                    <p>
+                        Không chỉ hấp dẫn bởi cảnh quan, Việt Nam còn để lại dấu ấn sâu đậm
+                        qua những món ăn đặc sắc như phở, bún bò Huế, cao lầu Hội An
+                        và cà phê sữa đá.
+                        Sự thân thiện, hiếu khách của con người Việt Nam
+                        chính là điều khiến du khách luôn muốn quay trở lại.
+                    </p>
+                    <p class="about-cta">
+                        <b>Hãy đến với Việt Nam</b> để tự mình khám phá vẻ đẹp thiên nhiên kỳ vĩ, thưởng thức nền ẩm thực đặc sắc và cảm nhận sự thân thiện, mến khách của con người nơi đây.
+                    </p>
+                </div>
+            </section>
+        </section>
+
+        <!-- Cuisine Page -->
+        <section id="cuisine" class="page">
+            <div class="page-header">
+                <h2>🍲 Ẩm Thực Việt Nam</h2>
+                <p class="page-subtitle">Hành trình khám phá những hương vị độc đáo</p>
+            </div>
+            <div class="filters">
+                <select id="cuisineFilter" class="filter-select">
+                    <option value="">Tất cả miền</option>
+                    <option value="Miền Bắc">Miền Bắc</option>
+                    <option value="Miền Trung">Miền Trung</option>
+                    <option value="Miền Nam">Miền Nam</option>
+                </select>
+                <div class="tags-filter" id="cuisineTags"></div>
+            </div>
+            <div class="items-grid" id="cuisineItems"></div>
+        </section>
+
+        <!-- Tourism Page -->
+        <section id="tourism" class="page">
+            <div class="page-header">
+                <h2>🗺️ Du Lịch Việt Nam</h2>
+                <p class="page-subtitle">Khám phá những điểm đến tuyệt vời</p>
+            </div>
+            <div class="filters">
+                <select id="tourismFilter" class="filter-select">
+                    <option value="">Tất cả loại</option>
+                    <option value="Biển">Biển</option>
+                    <option value="Núi">Núi</option>
+                    <option value="Thành phố">Thành phố</option>
+                    <option value="Văn hóa">Văn hóa</option>
+                </select>
+                <div class="tags-filter" id="tourismTags"></div>
+            </div>
+            <div class="items-grid" id="tourismItems"></div>
+        </section>
+
+        <!-- Culture Page -->
+        <section id="culture" class="page">
+            <div class="page-header">
+                <h2>🎭 Văn Hóa Truyền Thống</h2>
+                <p class="page-subtitle">Nơi lưu giữ bản sắc dân tộc</p>
+            </div>
+            <div class="filters">
+                <select id="cultureFilter" class="filter-select">
+                    <option value="">Tất cả loại</option>
+                    <option value="Lễ hội">Lễ hội</option>
+                    <option value="Nghệ thuật">Nghệ thuật</option>
+                    <option value="Thủ công">Thủ công</option>
+                    <option value="Tín ngưỡng">Tín ngưỡng</option>
+                </select>
+                <div class="tags-filter" id="cultureTags"></div>
+            </div>
+            <div class="items-grid" id="cultureItems"></div>
+        </section>
+
+        <!-- Blog Page -->
+        <section id="blog" class="page">
+            <div class="page-header">
+                <h2>📝 Blog & Tin Tức</h2>
+                <p class="page-subtitle">Những bài viết cảm hứng</p>
+            </div>
+            <div class="filters">
+                <select id="blogFilter" class="filter-select">
+                    <option value="">Tất cả danh mục</option>
+                    <option value="Du lịch">Du lịch</option>
+                    <option value="Ẩm thực">Ẩm thực</option>
+                    <option value="Văn hóa">Văn hóa</option>
+                    <option value="Tip">Tip</option>
+                </select>
+                <div class="tags-filter" id="blogTags"></div>
+            </div>
+            <div class="blog-grid" id="blogItems"></div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <div class="page-header">
+                <h2>📞 Liên Hệ Với Chúng Tôi</h2>
+                <p class="page-subtitle">Chúng tôi luôn sẵn sàng giúp đỡ bạn</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <h3>Địa chỉ</h3>
+                        <p>Đà nẵng, Việt Nam</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>info@vietnamculture.com</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📱</div>
+                        <h3>Điện thoại</h3>
+                        <p>+84 (0) 123 456 789</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Tên của bạn" required>
+                    <input type="email" placeholder="Email của bạn" required>
+                    <textarea placeholder="Tin nhắn của bạn" rows="6" required></textarea>
+                    <button type="submit" class="submit-btn">Gửi Tin Nhắn</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Search Results Modal -->
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSearchModal()">&times;</span>
+            <h2>Kết Quả Tìm Kiếm</h2>
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Detail Modal -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close" onclick="closeDetailModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Vietnam Culture Tourism</h4>
+                <p>Khám phá vẻ đẹp Việt Nam qua văn hóa, du lịch và ẩm thực.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liên kết</h4>
+                <ul>
+                    <li><a href="#" onclick="goToPage('cuisine')">Ẩm thực</a></li>
+                    <li><a href="#" onclick="goToPage('tourism')">Du lịch</a></li>
+                    <li><a href="#" onclick="goToPage('culture')">Văn hóa</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Theo dõi</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vietnam Culture Tourism. All rights reserved.</p>
+            <p>Tạo với ❤️ để khám phá Việt Nam</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
